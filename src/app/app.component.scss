@@ -1,0 +1,30 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+.claira-logo {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-top: 10px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .user {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(229,228,224);
+    margin-top: 10px;
+    margin-right: 15px;
+    border-radius: 5px;
+    img {
+      padding: 5px;
+      width: 70%;
+    }
+  }

@@ -1,0 +1,35 @@
+<mat-card>
+    <mat-card-title>Welcome to Claira</mat-card-title>
+    <mat-card-subtitle>
+        Claira uncovers your hidden competencies and improves your work experience
+    </mat-card-subtitle>
+    <mat-card-content>
+        <div class="arrow">
+            <div *ngIf="activePageIndex === 0" class="placeholder"></div>
+            <img *ngIf="activePageIndex > 0" (click)="previousButtonClicked()" src="./assets/images/claira_back_arrow.png"/>
+        </div>
+        <div class="mid-col">
+            <div class="image-card">
+                <p>
+                    {{ activePage.text }}
+                </p>
+                <img src="./assets/images/claira_{{ activePage.imageName }}.png" />
+                <mat-card-actions class="get-started" *ngIf="activePageIndex === 3">
+                    <button class="get-started-button" mat-button (click)="getStartedClicked()">Get Started</button>
+                </mat-card-actions>
+                <div *ngIf="activePageIndex < 3" class="button-placeholder"></div>
+            </div>
+            <div class="dots">
+                <img *ngFor="let page of pages; let i = index" (click)="arrowButtonClicked(i)" src="./assets/images/claira_{{ i === activePageIndex ? 'green' : 'gray' }}_dot.png"/>
+            </div>
+        </div>
+        <div class="arrow">
+            <div *ngIf="activePageIndex === 3" class="placeholder"></div>
+            <img *ngIf="activePageIndex < 3" (click)="nextButtonClicked()" src="./assets/images/claira_forward_arrow.png"/>
+        </div>
+        
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-button (click)="nextButtonClicked()">Next ></button>
+    </mat-card-actions>
+</mat-card>
