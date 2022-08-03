@@ -1,5 +1,7 @@
 :host {
     display: block;
+
+    --image-card-height: 405px;
 }
 
 .mat-card {
@@ -84,8 +86,10 @@ button {
     border-radius: 1em;
     padding: .5em;
     box-shadow: .1px 5px 6px 2px rgb(134, 134, 135);
-    width: 400px;
-    height: 460px;
+    width: 395px;
+    height: var(--image-card-height);
+    min-height: var(--image-card-height);
+    max-height: var(--image-card-height);
     font-size: 24px;
     img {
         width:220px;
@@ -123,10 +127,5 @@ p {
 .placeholder {
     width: 92px; 
     height: 92px;
-}
-
-.button-placeholder {
-    width: 90px; 
-    height: 90px;
 }
 

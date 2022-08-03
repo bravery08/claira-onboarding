@@ -17,7 +17,6 @@
                 <mat-card-actions class="get-started" *ngIf="activePageIndex === 3">
                     <button class="get-started-button" mat-button (click)="getStartedClicked()">Get Started</button>
                 </mat-card-actions>
-                <div *ngIf="activePageIndex < 3" class="button-placeholder"></div>
             </div>
             <div class="dots">
                 <img *ngFor="let page of pages; let i = index" (click)="arrowButtonClicked(i)" src="./assets/images/claira_{{ i === activePageIndex ? 'green' : 'gray' }}_dot.png"/>
